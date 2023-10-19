@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Homepage from './homepage'
 import { User } from '@prisma/client'
 
-export const authenticate = async () => {
+const authenticate = async () => {
   'use server'
 
   const id = cookies().get('userId')?.value

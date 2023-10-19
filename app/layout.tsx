@@ -20,7 +20,7 @@ const firaMono = Fira_Mono({
 
 export const metadata: Metadata = {
   title: 'QR Code Authentication',
-  description: 'User Auth Project created by Joshua Lawrence, Jr',
+  description: 'User Auth Project created by Joshua Lawrence, Jr'
 }
 
 export default async function RootLayout({

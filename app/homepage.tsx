@@ -19,7 +19,7 @@ export default function Homepage({ user, qrurl, sampleqr }: props) {
                 <div className="text-2xl flex flex-row items-baseline">
                     Logged in as <span className="text-rose-500 font-semibold text-3xl ml-3">{user?.username}</span>
                 </div>
-                <div className="text-lg font-light mt-5 md:mt-8 italic">
+                <div className="text-lg font-light mt-5 md:mt-8 italic text-center">
                     Scan the QR Code to log in on another device!
                 </div>
             </div>

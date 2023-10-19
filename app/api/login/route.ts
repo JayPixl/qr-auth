@@ -132,6 +132,15 @@ export async function POST(req: Request) {
 
                 revalidatePath("/")
 
+                await prisma.user.update({
+                    where: {
+                        id: match.id
+                    },
+                    data: {
+                        loginKey: cuid()
+                    }
+                })
+
                 return NextResponse.json({
                     success: true
                 })

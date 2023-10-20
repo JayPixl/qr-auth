@@ -17,6 +17,6 @@ export default function Client() {
     }, [])
     return <div className='w-full h-[90vh] flex flex-row justify-center items-center'>
         <div className='text-2xl'>Logging out...</div>
-        <div className='rounded-full border-transparent border-4 border-b-zinc-900 animate-spin w-12 h-12 ml-5' />
+        <div className='rounded-full border-transparent border-4 border-b-rose-500 animate-spin w-12 h-12 ml-5' />
     </div>
 }

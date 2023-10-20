@@ -23,7 +23,7 @@ export default function Form({ }: props) {
 
     const [sent, setSent] = useState(true)
 
-    const [error, setError] = useState("")
+    const [error, setError] = useState("Error")
 
     useEffect(() => {
         setInputs({
@@ -101,7 +101,7 @@ export default function Form({ }: props) {
                 </div>
             </div>
 
-            {error && <div className="w-full rounded-xl mt-8 flex flex-row items-center border-rose-500 border-2 text-rose-500 p-3">
+            {error && <div className="w-full rounded-xl mt-5 md:mt-8 flex flex-row items-center border-rose-500 border-2 text-rose-500 p-2 md:p-3">
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 mr-3">
                         <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-5a.75.75 0 01.75.75v4.5a.75.75 0 01-1.5 0v-4.5A.75.75 0 0110 5zm0 10a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
@@ -110,7 +110,7 @@ export default function Form({ }: props) {
                 <div>{error}</div>
             </div>}
 
-            <label htmlFor="username" className="pb-3 pt-8 text-2xl">
+            <label htmlFor="username" className="pb-3 pt-5 md:pt-8 text-xl md:text-2xl">
                 Username
             </label>
             <input
@@ -118,13 +118,13 @@ export default function Form({ }: props) {
                 name="username"
                 value={inputs.username}
                 onChange={e => setInputs({ ...inputs, username: e.target.value })}
-                className="rounded-xl bg-zinc-300 transition text-zinc-800 p-2 md:p-3 text-xl w-full text-center outline-none focus:bg-zinc-200"
+                className="rounded-xl bg-zinc-300 transition text-zinc-800 p-2 md:p-3 text-lg md:text-xl w-full text-center outline-none focus:bg-zinc-200"
                 required
                 minLength={3}
                 maxLength={15}
             />
 
-            <label htmlFor="password" className="pb-3 pt-8 text-2xl">
+            <label htmlFor="password" className="pb-3 pt-5 md:pt-8 text-xl md:text-2xl">
                 Password
             </label>
             <input
@@ -132,13 +132,13 @@ export default function Form({ }: props) {
                 name="password"
                 value={inputs.password}
                 onChange={e => setInputs({ ...inputs, password: e.target.value })}
-                className="rounded-xl bg-zinc-300 transition text-zinc-800 p-2 md:p-3 text-xl w-full text-center outline-none focus:bg-zinc-200"
+                className="rounded-xl bg-zinc-300 transition text-zinc-800 p-2 md:p-3 text-lg md:text-xl w-full text-center outline-none focus:bg-zinc-200"
                 required
                 minLength={4}
                 maxLength={25}
             />
 
-            <button type="submit" className={`text-2xl py-2 px-8 rounded-md self-center flex flex-row justify-center items-center font-semibold transition mt-12 ${!sent ? "bg-rose-500" : "bg-zinc-500"} text-zinc-900 hover:scale-105 transition`}>
+            <button type="submit" className={`text-xl md:text-2xl py-2 px-8 rounded-md self-center flex flex-row justify-center items-center font-semibold transition mt-8 md:mt-12 ${!sent ? "bg-rose-500" : "bg-zinc-500"} text-zinc-900 hover:scale-105 transition`}>
                 {page === "login" ? "Log In" : "Sign Up"} {sent && <div className="rounded-full border-transparent border-4 border-b-zinc-900 animate-spin w-6 h-6 ml-3" />}
             </button>
         </form>
